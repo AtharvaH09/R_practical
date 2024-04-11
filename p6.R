@@ -15,8 +15,8 @@ var = var(x); var
 #    H1: var != 30000
 
 test_statistic = (length(x) - 1) * var / 30000
-critical_value_low <- qchisq(0.025, length(x) - 1)
-critical_value_high <- qchisq(0.975, length(x) - 1)
+critical_value_low = qchisq(0.025, length(x) - 1)
+critical_value_high = qchisq(0.975, length(x) - 1)
 
 if (test_statistic < critical_value_low || test_statistic > critical_value_high) {
     print("Reject H0: Variance is not equal to 30000 at 5% level of significance")
@@ -40,9 +40,9 @@ if (test_statistic > critical_value) {
 # 3) H0: var >= 33000
 #    H1: var < 33000
 
-test_statistic <- ((length(x))- 1) * var / 33000
+test_statistic = ((length(x))- 1) * var / 33000
 
-critical_value <- qchisq(0.02, df = (length(x)) - 1)
+critical_value = qchisq(0.02, df = (length(x)) - 1)
 
 if (test_statistic < critical_value) {
     print("Reject H0: Variance is less than 33,000 at 2% level of significance")
@@ -84,8 +84,8 @@ if (test_statistic_1 < critical_value_low_1 || test_statistic_1 > critical_value
 # 2) H0: varA <= varB 
 #    H1: varA > varB
 
-test_statistic_2 <- variance_A / variance_B
-critical_value_2 <- qf(0.90, df1 = length(variety_A) - 1, df2 = length(variety_B) - 1)
+test_statistic_2 = variance_A / variance_B
+critical_value_2 = qf(0.90, df1 = length(variety_A) - 1, df2 = length(variety_B) - 1)
 
 if (test_statistic_2 > critical_value_2) {
     print("Reject H0: Variance of variety A is greater than variety B at 10% level of significance")
@@ -97,8 +97,8 @@ if (test_statistic_2 > critical_value_2) {
 # 3) H0: varA >= varB 
 #    H1: varA < varB
 
-test_statistic_3 <- variance_A / variance_B
-critical_value_3 <- qf(0.01, df1 = length(variety_A) - 1, df2 = length(variety_B) - 1)
+test_statistic_3 = variance_A / variance_B
+critical_value_3 = qf(0.01, df1 = length(variety_A) - 1, df2 = length(variety_B) - 1)
 
 if (test_statistic_3 < critical_value_3) {
     print("Reject H0: Variance of variety A is less than variety B at 1% level of significance")
