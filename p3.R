@@ -72,5 +72,6 @@ P2 = 1 - pnorm(0.5, mean, sd); P2
 
 
 # Q5) Plot Normal Distribution Curve
-x = seq(-2,6,0.02)
-p = dnorm(x,2,sqrt(1.5))
+x = seq(-2, 6, 0.02)
+p = dnorm(x, 2, sqrt(1.5))
+plot(x, p, type="l")  # 'l' specifies a line plot
